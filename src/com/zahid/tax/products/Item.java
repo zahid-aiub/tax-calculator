@@ -1,5 +1,7 @@
 package com.zahid.tax.products;
 
+import com.zahid.tax.productfactory.ItemFactory;
+
 public abstract class Item {
     protected String name;
 
@@ -76,5 +78,9 @@ public abstract class Item {
             return "imported";
         }
     }
+
+    public abstract ItemFactory getFactory();
+
+    public abstract double getTaxValue(String country);
 
 }
