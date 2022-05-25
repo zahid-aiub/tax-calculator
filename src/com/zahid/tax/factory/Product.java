@@ -1,6 +1,6 @@
 package com.zahid.tax.factory;
 
-public class Product {
+public abstract class Product {
 
     protected String name;
 
@@ -77,4 +77,7 @@ public class Product {
             return "imported";
         }
     }
+
+    public abstract double getTaxValue();
+
 }

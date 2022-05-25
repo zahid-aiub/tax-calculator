@@ -6,6 +6,7 @@ public class ProductFactory {
 
         if (productName == null || productName.isEmpty()) return null;
 
+        //todo: need to add more items here
         switch (productName.toUpperCase()) {
             case "BOOK":
                 return new Book();

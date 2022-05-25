@@ -1,4 +1,5 @@
 import com.zahid.tax.cart.Helper;
+import com.zahid.tax.tax.Payment;
 
 public class TaxCalculatorApplication {
 
@@ -7,6 +8,8 @@ public class TaxCalculatorApplication {
         System.out.println("::::::::::::::::: Tax Calculator Application Started :::::::::::::::::");
         Helper helper = new Helper();
         helper.start();
+//        Payment payment = new Payment();
+//        payment.generateBillsForAllItemsInCart();
         System.out.println("::::::::::::::::: Tax Calculator Application Stopped :::::::::::::::::");
 
     }

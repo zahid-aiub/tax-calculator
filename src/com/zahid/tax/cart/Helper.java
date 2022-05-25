@@ -3,6 +3,7 @@ package com.zahid.tax.cart;
 import com.zahid.tax.factory.IProduct;
 import com.zahid.tax.factory.Product;
 import com.zahid.tax.factory.ProductFactory;
+import com.zahid.tax.tax.Payment;
 
 import java.util.Scanner;
 
@@ -29,6 +30,10 @@ public class Helper {
             int quantity = getQuantityFromEndUser();
             fetchProductAndAddToCart(name, price, isImported, quantity);
         } while (isAddAnotherProduct());
+
+        //todo: need to call generateBillsForAllItemsInCart() from here
+        Payment payment = new Payment();
+        payment.generateBillsForAllItemsInCart(cart);
     }
 
     private void fetchProductAndAddToCart(String name, double price, boolean isImported, int quantity) {
@@ -36,7 +41,7 @@ public class Helper {
         IProduct iProduct = factory.getProductFromFactory(name);
         Product product = iProduct.createProduct(name, price, isImported, quantity);
         cart.addToCart(product);
-        System.out.println(product.getPrice());
+        System.out.println(cart.getItemsFromCart().size());
     }
 
 

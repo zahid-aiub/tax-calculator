@@ -1,18 +1,15 @@
 package com.zahid.tax.utils.enums;
 
-public enum LocalTaxValues {
+public enum TaxValues {
 
     BOOK_TAX(0.0),
     FOOD_TAX(0.0),
     MEDICINE_TAX(0.0),
     MISC_TAX(0.10);
 
-    /**
-     * The item tax value.
-     */
     private double itemTaxValue;
 
-    private LocalTaxValues(double taxValue) {
+    private TaxValues(double taxValue) {
         itemTaxValue = taxValue;
     }
 
