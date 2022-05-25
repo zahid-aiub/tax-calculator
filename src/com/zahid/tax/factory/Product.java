@@ -1,28 +1,27 @@
-package com.zahid.tax.products;
+package com.zahid.tax.factory;
 
-import com.zahid.tax.productfactory.ItemFactory;
+public class Product {
 
-public abstract class Item {
     protected String name;
 
     protected double price;
 
-    protected Boolean imported;
+    protected Boolean isImported;
 
     protected int quantity;
     protected double taxedCost;
 
-    public Item() {
+    public Product() {
         this.price = 0.0;
-        this.imported = false;
+        this.isImported = false;
         this.quantity = 0;
         this.taxedCost = 0.0;
     }
 
-    public Item(String name, double price, boolean imported, int quantity) {
+    public Product(String name, double price, boolean isImported, int quantity) {
         this.name = name;
         this.price = price * quantity;
-        this.imported = imported;
+        this.isImported = isImported;
         this.quantity = quantity;
     }
 
@@ -42,12 +41,12 @@ public abstract class Item {
         this.price = price * quantity;
     }
 
-    public boolean isImported() {
-        return imported;
+    public boolean getIsImported() {
+        return isImported;
     }
 
-    public void setImported(boolean imported) {
-        this.imported = imported;
+    public void setIsImported(boolean isImported) {
+        this.isImported = isImported;
     }
 
     public int getQuantity() {
@@ -68,7 +67,7 @@ public abstract class Item {
 
     @Override
     public String toString() {
-        return (quantity + " " + toString(imported) + " " + name + " : " + taxedCost);
+        return (quantity + " " + toString(isImported) + " " + name + " : " + taxedCost);
     }
 
     public String toString(boolean imported) {
@@ -78,9 +77,4 @@ public abstract class Item {
             return "imported";
         }
     }
-
-    public abstract ItemFactory getFactory();
-
-    public abstract double getTaxValue(String country);
-
 }
