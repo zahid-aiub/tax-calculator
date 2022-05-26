@@ -7,11 +7,17 @@ public class ProductFactory {
         if (productName == null || productName.isEmpty()) return null;
 
         //todo: need to add more items here
-        switch (productName.toUpperCase()) {
+        switch (productName.trim().toUpperCase()) {
             case "BOOK":
                 return new Book();
-            case "FOOD":
+            case "CHOCOLATE BAR":
+            case "BOX OF CHOCOLATES":
                 return new Food();
+            case "MEDICINE":
+                return new Medicine();
+            case "MUSIC CD":
+            case "BOTTLE OF PERFUME":
+                return new MiscProduct();
             default:
                 throw new IllegalArgumentException("Unknown product: " + productName);
         }

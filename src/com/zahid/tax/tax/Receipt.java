@@ -24,8 +24,8 @@ public class Receipt {
             receipt += (p.toString() + "\n");
         }
 
-        receipt += "Total sales tax = " + totalSalesTax + "\n";
-        receipt += "Total amount = " + totalAmount + "\n";
+        receipt += "Sales Taxes: " + totalSalesTax + "\n";
+        receipt += "Total: " + totalAmount + "\n";
 
         return receipt;
     }

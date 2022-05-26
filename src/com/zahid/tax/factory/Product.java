@@ -67,7 +67,7 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return (quantity + " " + toString(isImported) + " " + name + " : " + taxedCost);
+        return (quantity + " " + toString(isImported) + " " + name + ": " + taxedCost);
     }
 
     public String toString(boolean imported) {

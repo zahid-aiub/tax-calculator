@@ -2,7 +2,7 @@ package com.zahid.tax.tax;
 
 import com.zahid.tax.cart.Cart;
 import com.zahid.tax.factory.Product;
-import com.zahid.tax.utils.MathHelper;
+import com.zahid.tax.utils.MathUtils;
 
 import java.util.List;
 
@@ -46,13 +46,13 @@ public class Payment {
         if (isImported) {
             taxVal += (price * 0.05);
         }
-        taxVal = MathHelper.roundOff(taxVal);
+        taxVal = MathUtils.roundOff(taxVal);
 
         return taxVal;
     }
 
     public double calcTotalProductCost(double price, double tax) {
-        return MathHelper.truncate(price + tax);
+        return MathUtils.truncate(price + tax);
     }
 
 
@@ -62,7 +62,7 @@ public class Payment {
         for (Product p : prodList) {
             totalTax += (p.getTaxedCost() - p.getPrice());
         }
-        return MathHelper.truncate(totalTax);
+        return MathUtils.truncate(totalTax);
     }
 
     public double calculateTotalAmount(List<Product> prodList) {
@@ -71,7 +71,7 @@ public class Payment {
         for (Product p : prodList) {
             totalAmount += p.getTaxedCost();
         }
-        return MathHelper.truncate(totalAmount);
+        return MathUtils.truncate(totalAmount);
     }
 
 }
