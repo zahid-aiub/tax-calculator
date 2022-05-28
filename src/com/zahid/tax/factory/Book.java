@@ -21,4 +21,5 @@ public class Book extends Product implements IProduct {
     public double getTaxValue() {
         return TaxValues.BOOK_TAX.getTax();
     }
+
 }

@@ -6,7 +6,6 @@ public class ProductFactory {
 
         if (productName == null || productName.isEmpty()) return null;
 
-        //todo: need to add more items here
         switch (productName.trim().toUpperCase()) {
             case "BOOK":
                 return new Book();
@@ -14,6 +13,7 @@ public class ProductFactory {
             case "BOX OF CHOCOLATES":
                 return new Food();
             case "MEDICINE":
+            case "PACKET OF HEADACHE PILLS":
                 return new Medicine();
             case "MUSIC CD":
             case "BOTTLE OF PERFUME":

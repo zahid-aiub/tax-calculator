@@ -21,4 +21,5 @@ public class Food extends Product implements IProduct {
     public double getTaxValue() {
         return TaxValues.FOOD_TAX.getTax();
     }
+
 }

@@ -21,4 +21,5 @@ public class MiscProduct extends Product implements IProduct {
     public double getTaxValue() {
         return TaxValues.MISC_TAX.getTax();
     }
+
 }

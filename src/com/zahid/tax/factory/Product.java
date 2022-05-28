@@ -2,14 +2,14 @@ package com.zahid.tax.factory;
 
 public abstract class Product {
 
-    protected String name;
+    private String name;
 
-    protected double price;
+    private double price;
 
-    protected Boolean isImported;
+    private Boolean isImported;
 
-    protected int quantity;
-    protected double taxedCost;
+    private int quantity;
+    private double taxedCost;
 
     public Product() {
         this.price = 0.0;
@@ -67,14 +67,14 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return (quantity + " " + toString(isImported) + " " + name + ": " + taxedCost);
+        return (quantity + toString(isImported) + " " + name + ": " + taxedCost);
     }
 
     public String toString(boolean imported) {
         if (!imported) {
-            return null;
+            return "";
         } else {
-            return "imported";
+            return " imported";
         }
     }
 

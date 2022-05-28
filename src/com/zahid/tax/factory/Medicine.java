@@ -21,4 +21,5 @@ public class Medicine extends Product implements IProduct {
     public double getTaxValue() {
         return TaxValues.MEDICINE_TAX.getTax();
     }
+
 }
