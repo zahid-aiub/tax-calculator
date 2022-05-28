@@ -6,8 +6,6 @@ public class TaxCalculatorApplication {
 
         Helper helper = new Helper();
         helper.start();
-//        Payment payment = new Payment();
-//        payment.generateBillsForAllItemsInCart();
 
     }
 }

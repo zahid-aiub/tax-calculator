@@ -41,7 +41,6 @@ public class Helper {
         IProduct iProduct = factory.getProductFromFactory(name);
         Product product = iProduct.createProduct(name, price, isImported, quantity);
         cart.addToCart(product);
-//        System.out.println(cart.getItemsFromCart().size());
     }
 
 
